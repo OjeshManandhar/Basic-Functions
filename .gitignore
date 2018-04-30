@@ -1,0 +1,4 @@
+bin/
+obj/
+Basic Functions.*
+!Basic Functions.cbp
