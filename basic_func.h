@@ -34,6 +34,6 @@ char **get_2D_char_array(const int, const int);
 char **change_2D_char_array_size(char **, const int, const int, const int);
 
 //Front-end functions
-void print_box(const short int, const short int, const short int, const short int);
+void print_box(const unsigned short int, const unsigned short int, const unsigned short int, const unsigned short int);
 void print_detail(const char *, const char*);
-int display_menu(char **, const int, int);
+unsigned short int display_menu(char **, const unsigned short int, unsigned short int);

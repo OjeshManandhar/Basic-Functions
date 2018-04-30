@@ -96,7 +96,7 @@ char **change_2D_char_array_size(char **data, const int old_size, const int new_
 }
 
 //Front-end function
-void print_box(const short int box_type, const short int line_no1, const short int line_no2, const short int line_type)
+void print_box(const unsigned short int box_type, const unsigned short int line_no1, const unsigned short int line_no2, const unsigned short int line_type)
 {
     struct box_type_ASCII_codes
     {
@@ -264,7 +264,7 @@ void print_detail(const char *data1, const char *data2)
     (void)get_key();
 }
 
-int display_menu(char **menu_items, const int n, int choice)
+unsigned short int display_menu(char **menu_items, const unsigned short int n, unsigned short int choice)
 {
     //"menu_items" must be DYNAMICALLY created array....I don't know why
     //This function doesn't free() "menu_items"...it must be done manually
@@ -345,7 +345,8 @@ int display_menu(char **menu_items, const int n, int choice)
             break;
         case ESC:
             choice = n - 1;
-            return choice;
+            if (strcmpi(menu_items[choice], "Exit") != 0)
+                return choice;
         case ENTER:
             return choice;
         }
