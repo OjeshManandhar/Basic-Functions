@@ -259,8 +259,8 @@ void print_detail(const char *data1, const char *data2)
 
     if (data2 != NULL)
     {
-        top.row++;
-        gotoxy(top.row + 1, top.col + 2);
+        len = strlen(data2);
+        gotoxy(top.row + 2, ((size.col - len)/2));
         printf("%s", data2);
     }
 
