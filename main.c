@@ -230,12 +230,15 @@ void print_detail(const char *data1, const char *data2)
     if (data2 == NULL)
     {
         length += 1;
-        breadth += 30;
+        breadth += strlen(data1);
     }
     else
     {
         length += 2;
-        breadth += strlen(data2);
+        if (strlen(data2) > strlen(data1))
+            breadth += strlen(data2);
+        else
+            breadth += strlen(data1);
     }
 
     system("cls || clear");
