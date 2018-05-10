@@ -23,6 +23,7 @@ struct position_detail
 
 unsigned int getkey();
 unsigned int get_key();         //goes to bottom right corner of screen and asks for input
+void delay(unsigned int);
 
 //Console functions
 void gotoxy(const uint8_t, const uint8_t);

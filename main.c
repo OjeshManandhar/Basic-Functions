@@ -27,6 +27,12 @@ unsigned int get_key()
     return key;
 }
 
+void delay(unsigned int mseconds)
+{
+    clock_t goal = mseconds + clock();
+    while (goal > clock());
+}
+
 //Console functions
 void gotoxy(const uint8_t row, const uint8_t col)
 {
